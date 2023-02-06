@@ -1,0 +1,105 @@
+.todo-index {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  height: 100%;
+  overflow-y: scroll;
+  opacity: 1;
+}
+
+.todo-index::-webkit-scrollbar {
+  display: none;
+}
+
+.todos-not-done, .todos-done {
+  width: calc(47.5% - 4px);
+  border: 1px solid black;
+  padding: 10px 0 0 10px;
+}
+
+.todo-index-header {
+  user-select: none;
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 40px);
+  border: none;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  justify-content: space-between;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.todo-task-text {
+  user-select: none;
+  font-size: 20px;
+  flex: 1;
+  width: 70%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.todo-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+}
+
+.todo-actions > * {
+  margin-left: 5px;
+}
+
+.edit-todo-input {
+  font-size: 20px;
+  width: 70%;
+  border: none;
+}
+
+.edit-todo-input:focus {
+  outline: none;
+}
+
+.todo-items-container {
+  height: 100%;
+}
+
+.dragging {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.dropping {
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.header-dropping {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .todo-index {
+    width: 90%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .todos-done, .todos-not-done {
+    width: calc(100% - 20px);
+    height: 47.5%;
+  }
+}
