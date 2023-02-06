@@ -49,6 +49,7 @@ const App: React.FC = () => {
     <DragDropContext onDragEnd={handleDragEnd}>
       <div className="App">
         <h1 className="main-header">Armadillo</h1>
+        <p className="main-motto">Roll up your tasks like an armadillo, always ready for action.</p>
         <Input task={task} setTask={setTask} handleAdd={handleAdd} />
         <TodoIndex
           todos={todos}
